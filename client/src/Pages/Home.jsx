@@ -1,11 +1,18 @@
 import React from 'react'
 import Header from '../Componants/Header.jsx'
+import Footer from '../Componants/Footer.jsx'
+import Banner from '../Componants/Banner.jsx'
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header/>
-      <h1>This is home page</h1>
-    </div>
+      <section className='w-full min-h-screen  '>
+        <div>
+        </div>
+        <Banner/>
+      </section>
+      <Footer/>
+    </>
   )
 }
