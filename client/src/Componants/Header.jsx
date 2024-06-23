@@ -2,6 +2,7 @@ import React from 'react'
 // import styled from 'styled-components';
 import { useState } from 'react'
 import BackgroundVideo from '/Images/video1.mp4'
+import BackgroundImage from '/Images/image5.jpg'
 
 
 
@@ -16,10 +17,8 @@ export default function Header() {
   const [toggle, setToggle] = useState(false)
   return (
     <>
-      <section className='w-full min-h-72  '>
-{/* <video src={BackgroundVideo} autoPlay loop muted className='fixed -z-10 w-full h-full bg-contain bg-top '> */}
-{/* </video> */}
-         <div className='w-full flex flex-row items-center justify-between'>
+      <section className='w-full  bg-slate-100 mb-20 ' >
+         <div className='w-full flex flex-row items-center justify-between' >
           <div>
             <Link to='/'>
            <h1 className=' text-xl md:text-3xl text-pink-400 font-bold '>Sanju Lounge</h1>
@@ -53,24 +52,26 @@ export default function Header() {
           </div>
           
           {/* responsive menu */}
-
-          <nav className={`fixed transition-all duration-700 w-full  bg-pink-300 rounded-md h-screen ${ toggle ? "left-0" : " -left-full"}`}>
+          
+        <div className='lg:hidden block'>
+          <nav className={`fixed transition-all duration-700 w-full block bg-slate-200 rounded-md h-screen ${ toggle ? "left-0" : " -left-full"}`}>
           <ul className='flex flex-col  gap-5 justify-between items-start mx-10 mt-10'>
           <Link to='/'>
-<li className='text-white font-semibold cursor-pointer'>Home</li>
+<li className='text-pink-400 font-semibold cursor-pointer'>Home</li>
             </Link>
             <Link to='/service'>
-    <li className='text-white font-semibold cursor-pointer'>Service</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Service</li>
             </Link>
             <Link to='/blog'>
-    <li className='text-white font-semibold cursor-pointer'>Blog</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Blog</li>
             </Link>
 
             <Link to='/contact'>
-    <li className='text-white font-semibold cursor-pointer'>Contact</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Contact</li>
             </Link>
   </ul>
 </nav>
+</div>
       </section>
           
     </>
