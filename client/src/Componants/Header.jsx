@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import { useState } from 'react'
-import video from '/Images/video1.mp4'
+import BackgroundVideo from '/Images/video1.mp4'
 
 
 
@@ -12,31 +12,46 @@ import { IoCloseSharp } from "react-icons/io5";
 
 export default function Header() {
   const [toggle, setToggle] = useState(false)
-  const Title = styled.h1`
-  font-size: 2.5em;
-  font-family: 'Italianno';
-`;
   return (
     <>
-      <section className='w-full h-screen bg-slate-400'>
-        <div className='w-full relative flex justify-between h-1/2'>
-          <div className='absolute'>
-            <video src={video}></video>
+      <section className='w-full h-screen   '>
+<video src="" autoPlay loop muted className='fixed -z-10 w-full'>
+  <source src={BackgroundVideo} type="video/mp4" />
+</video>
+         <div className='w-full flex flex-row items-center justify-between'>
+         <div>
+           <h1 className=' text-xl md:text-3xl text-pink-400 font-bold '>Sanju Lounge</h1>
           </div>
-          <Title className=' text-xl md:text-3xl text-pink-400 font-bold '>Sanju Lounge</Title>
-
+<nav className='hidden md:block'>
+  <ul className='flex flex-row items-center gap-5 justify-between'>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Home</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Service</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Blog</li>
+    <li className='text-pink-400 font-semibold cursor-pointer'>Contact</li>
+  </ul>
+</nav>
             
           <div className='md:hidden'>
           {
             toggle ?
-            <MdOutlineMenuOpen onClick={()=> setToggle(!toggle)} className='h-10 w-10 text-pink-400 cursor-pointer' />
-            :
             <IoCloseSharp onClick={()=> setToggle(!toggle)} className='h-10 w-10 text-pink-400 cursor-pointer'/>
+            :
+            <MdOutlineMenuOpen onClick={()=> setToggle(!toggle)} className='h-10 w-10 text-pink-400 cursor-pointer' />
           }
           </div>
+          </div>
           
+          {/* responsive menu */}
+
+          <nav className={`fixed transition-all duration-700 w-full  bg-pink-300 rounded-md h-screen ${ toggle ? "left-0" : " -left-full"}`}>
+  <ul className='flex flex-col  gap-5 justify-between items-start mx-10 mt-10'>
+    <li className='text-white font-semibold cursor-pointer'>Home</li>
+    <li className='text-white font-semibold cursor-pointer'>Service</li>
+    <li className='text-white font-semibold cursor-pointer'>Blog</li>
+    <li className='text-white font-semibold cursor-pointer'>Contact</li>
+  </ul>
+</nav>
           
-        </div>
       </section>
     </>
   )
