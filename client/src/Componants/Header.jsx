@@ -1,8 +1,9 @@
 import React from 'react'
 // import styled from 'styled-components';
+import { ReactTyped } from "react-typed";
 import { useState } from 'react'
 import BackgroundVideo from '/Images/video1.mp4'
-import BackgroundImage from '/Images/image5.jpg'
+import BackgroundImage from '/Images/image8.jpg'
 
 
 
@@ -17,11 +18,11 @@ export default function Header() {
   const [toggle, setToggle] = useState(false)
   return (
     <>
-      <section className='w-full  bg-slate-100 mb-20 ' >
-         <div className='w-full flex flex-row items-center justify-between' >
+      <section className='w-full  mb-20 min-h-96 bg-no-repeat -z-10 shadow-xl rounded-lg  h-full 'style={{backgroundImage: `url(${BackgroundImage}) `, backgroundPositionX:"center", backgroundOrigin:"content-box", backgroundSize:"cover", backgroundPosition:"center" }}  >
+         <div className='w-full flex flex-row items-center justify-between ' >
           <div>
             <Link to='/'>
-           <h1 className=' text-xl md:text-3xl text-pink-400 font-bold '>Sanju Lounge</h1>
+           <h1 id='logo' className=' text-2xl md:text-4xl text-pink-400 font-bold '>Sanju Lounge</h1>
             </Link>
           </div>
 <nav className='hidden md:block'>
@@ -44,12 +45,28 @@ export default function Header() {
           <div className='md:hidden'>
           {
             toggle ?
-            <IoCloseSharp onClick={()=> setToggle(!toggle)} className='h-10 w-10 text-pink-400 cursor-pointer'/>
+            <IoCloseSharp onClick={()=> setToggle(!toggle)} className='h-9 w-9 text-pink-400 cursor-pointer'/>
             :
-            <MdOutlineMenuOpen onClick={()=> setToggle(!toggle)} className='h-10 w-10 text-pink-400 cursor-pointer' />
+            <MdOutlineMenuOpen onClick={()=> setToggle(!toggle)} className='h-9 w-9 text-pink-400 cursor-pointer' />
           }
           </div>
-          </div>
+        </div>
+        
+
+        <section className='w-full min-h-72 flex place-content-center items-center'>
+        <ReactTyped  className="sm:text-2xl md:hidden  font-bold text-pink-400 "
+      
+      strings={[
+        "  Fashion Designing",
+        " Western Makeover",
+        " Skin Care ",
+        "Hair Care ",
+      ]}
+      typeSpeed={80}
+      backSpeed={40}
+      loop={true}
+/>
+        </section>
           
           {/* responsive menu */}
           
