@@ -18,7 +18,9 @@ export default function Header() {
   const [toggle, setToggle] = useState(false)
   return (
     <>
-      <section className='w-full  mb-20 min-h-96 bg-no-repeat -z-10 shadow-xl rounded-lg  h-full 'style={{backgroundImage: `url(${BackgroundImage}) `, backgroundPositionX:"center", backgroundOrigin:"content-box", backgroundSize:"cover", backgroundPosition:"center" }}  >
+      <section className='w-full  mb-20 min-h-96 bg-no-repeat -z-10 shadow-xl rounded-lg  h-full '
+      // style={{backgroundImage: `url(${BackgroundImage}) `, backgroundPositionX:"center", backgroundOrigin:"content-box", backgroundSize:"cover", backgroundPosition:"center" }}  
+      >
          <div className='w-full flex flex-row items-center justify-between ' >
           <div>
             <Link to='/'>
