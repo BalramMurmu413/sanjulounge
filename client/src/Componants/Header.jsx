@@ -2,7 +2,6 @@ import React from 'react'
 // import styled from 'styled-components';
 import { ReactTyped } from "react-typed";
 import { useState } from 'react'
-import BackgroundVideo from '/Images/video1.mp4'
 import BackgroundImage from '/Images/image8.jpg'
 
 
@@ -19,7 +18,7 @@ export default function Header() {
   return (
     <>
       <section className='w-full  mb-20 min-h-96 bg-no-repeat -z-10 shadow-xl rounded-lg  h-full '
-      // style={{backgroundImage: `url(${BackgroundImage}) `, backgroundPositionX:"center", backgroundOrigin:"content-box", backgroundSize:"cover", backgroundPosition:"center" }}  
+      style={{backgroundImage: `url(${BackgroundImage}) `, backgroundPositionX:"center", backgroundOrigin:"content-box", backgroundSize:"cover", backgroundPosition:"center" }}  
       >
          <div className='w-full flex flex-row items-center justify-between ' >
           <div>

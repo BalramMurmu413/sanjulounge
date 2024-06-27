@@ -15,7 +15,7 @@ export default function Contact() {
 
 <section className='w-full min-h-60 m-0 items-center flex flex-col'>
   <div>
-    <h1 className='font-extrabold text-4xl text-pink-400'>Get in Touch</h1>
+    <h1 className='font-extrabold text-xl md:text-4xl underline cursor-default text-pink-400'>Get in Touch</h1>
   </div>
 
   <div className='w-full min-h-64  my-10  flex flex-row items-center justify-around flex-wrap'>

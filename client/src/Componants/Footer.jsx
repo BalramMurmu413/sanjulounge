@@ -65,7 +65,9 @@ export default function Footer() {
         </div>
       </section>
       <section className='w-full min-h-10 flex items-center  justify-center'>
+          <Link to='https://api.whatsapp.com/send?phone=917979729392&text=You%20are%20chatting%20with%20Balram%20Murmu...How%20can%20I%20help%20you%20?' target='blank'>
         <p >Designed By Balram Murmu</p>
+          </Link>
       </section>
       </ScrollAnimation>
 
