@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Componants/Header.jsx'
 import Footer from '../Componants/Footer.jsx'
+import GetInTouch from '../Componants/GetInTouch.jsx'
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
@@ -53,6 +54,7 @@ export default function Contact() {
 
 
   </div>
+            <GetInTouch/>
 </section>
 
 
